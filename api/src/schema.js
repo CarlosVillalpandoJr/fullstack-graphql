@@ -10,6 +10,7 @@ const typeDefs = gql`
         username: String!
     }
 
+
     type Pet {
         id: ID!
         createdAt: String!
