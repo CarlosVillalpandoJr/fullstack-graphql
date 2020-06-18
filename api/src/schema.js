@@ -2,6 +2,7 @@ const { gql } = require('apollo-server')
 
 /**
  * Type Definitions for our Schema using the SDL.
+ * "That's it as for the types as far as the models in the DB goes"
  */
 const typeDefs = gql`
     type User {
@@ -16,8 +17,13 @@ const typeDefs = gql`
         type: String!
     }
 
+    input PetInput {
+        name: String
+        type: String
+    }
+
     type Query {
-        pets: [Pet]!
+        pets(input: PetInput): [Pet]!
     }
 `;
 
