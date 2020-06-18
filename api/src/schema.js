@@ -23,9 +23,19 @@ const typeDefs = gql`
         type: String
     }
 
+    input NewPetInput {
+        name: String!
+        type: String!
+    }
+
     type Query {
-        pets(input: PetInput): [Pet]!
-        pet(input: PetInput): pet
+        petsFromSchema(input: PetInput): [Pet]!
+        petFromSchema(input: PetInput): Pet
+    }
+
+    type Mutation {
+        # takes in an arguement called input, type is NewPetInput(required), returns a type Pet(required)
+        newPet(input: NewPetInput!): Pet!
     }
 `;
 

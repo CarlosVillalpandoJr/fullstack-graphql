@@ -5,16 +5,20 @@
 
 module.exports = {
   Query: {
-    pets(_, {input}, context) {
-      return context.models.Pet.findMany({input})
+    petsFromSchema(_, {input}, context) {
+      console.log(input)
+      return context.models.Pet.findMany(input)
     },
-    pet(_, {input}) {
+    petFromSchema(_, {input}, context) {
       return context.models.Pet.findOne(input)
     }
   },
-  // Mutation: {
-    
-  // },
+  Mutation: {
+    newPet(_, {input}, context) {
+      const pet = context.models.Pet.create(input)
+      return pet
+    }
+  },
   // Pet: {
   //   img(pet) {
   //     return pet.type === 'DOG'
