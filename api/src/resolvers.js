@@ -11,7 +11,7 @@ module.exports = {
     },
     petFromSchema(_, {input}, context) {
       console.log('Query => pet')
-      return context.models.Pet.findOne(input)
+      return context.models.Pet.findOne()
     }
   },
   Mutation: {
@@ -37,8 +37,11 @@ module.exports = {
   //   }
   // },
   User: {
-    pet(user, _, context) {
-      
+    pets(user, _, context) {
+      // real world, but all have same user id 
+      // return context.models.Pet.findMany({user: user.id})
+      console.log('User => pets')
+      return context.models.Pet.findMany()
     }
   }
 }
