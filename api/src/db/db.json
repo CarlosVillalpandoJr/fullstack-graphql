@@ -8,31 +8,22 @@
       "id": "1",
       "createdAt": "12:01PM",
       "name": "Missy",
-      "type": "DOG"
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
     },
     {
       "id": "2",
       "createdAt": "12:00PM",
       "name": "Paloma",
-      "type": "DOG"
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
     },
     {
       "id": "PG7MMsTXlcznEViwZCX11",
       "createdAt": 1592515609181,
       "name": "Tommy",
-      "type": "CAT"
-    },
-    {
-      "id": "QD0EpqCrL8xig2IF8PrKM",
-      "createdAt": 1592525968583,
-      "name": "Tommy",
-      "type": "CAT"
-    },
-    {
-      "id": "fRy9kSV6InoBFKvZPV0TM",
-      "createdAt": 1592525973833,
-      "name": "Tommy",
-      "type": "CAT"
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
     }
   ]
 }

@@ -5,9 +5,11 @@ const { gql } = require('apollo-server')
  * "That's it as for the types as far as the models in the DB goes"
  */
 const typeDefs = gql`
+
     type User {
         id: ID!
         username: String!
+        pets: [Pet]!
     }
 
 
@@ -16,6 +18,8 @@ const typeDefs = gql`
         createdAt: String!
         name: String!
         type: String!
+        img: String
+        owner: User!
     }
 
     input PetInput {
