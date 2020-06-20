@@ -28,7 +28,7 @@ module.exports = {
       console.log('PET => owner')
       return context.models.User.findOne()
     }
-  }
+  },
   // Pet: {
   //   img(pet) {
   //     return pet.type === 'DOG'
@@ -36,7 +36,9 @@ module.exports = {
   //       : 'http://placekitten.com/300/300'
   //   }
   // },
-  // User: {
-    
-  // }
+  User: {
+    pet(user, _, context) {
+      
+    }
+  }
 }
